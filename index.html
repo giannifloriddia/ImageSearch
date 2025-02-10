@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script type="module" src="scripts/ISearchEngine_Manager.js"></script>
+</head>
+
+<body>
+
+    <audio id="click-sound" src="audio/click.mp3"></audio>
+
+    <header class="container">
+        <h1>Image Gallery</h1>
+    </header>
+
+    <main class="container">
+
+        <div id="processing-info"> </div>
+
+        <h3>Key Search</h3>
+            <section id="search-section" class="container mt-4">
+                <div class="input-group mb-3">
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="Search" type="search" class="input form-control" aria-label="Search for photos"
+                               aria-describedby="button-search" id="input-search">
+                    </div>
+                    <button class="btn btn-outline-secondary" type="button" id="button-search">
+                        <span>Search</span>
+                    </button>
+                    <button class="button4" id="play-button">
+                        <span class="button_text">Play/Pause Music</span>
+                    </button>
+                </div>
+                <div class="radio-inputs">
+                    <label class="radio">
+                        <input type="radio" name="radio" checked="">
+                        <span class="name">burj khalifa</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name">chichen itza</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="name">christ the reedemer</span>
+                    </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">eiffel tower</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">great wall of china</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">machu pichu</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" checked="">
+                    <span class="name">pyramids of giza</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">roman colosseum</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">statue of liberty</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">stonehenge</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">taj mahal</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="name">venezuela angel falls</span>
+                </label>
+            </div>
+        </section>
+
+        <h3>Dominant Color</h3>
+        <div class="color-picker">
+            <div class="dominant-box" style="background-color: #cd9a67;" data-color="#cd9a67"></div>
+            <div class="dominant-box" style="background-color: #356a9f;" data-color="#356a9f"></div>
+            <div class="dominant-box" style="background-color: #d6ac82;" data-color="#d6ac82"></div>
+            <div class="dominant-box" style="background-color: #234669;" data-color="#234669"></div>
+            <div class="dominant-box" style="background-color: #1d3a57;" data-color="#1d3a57"></div>
+            <div class="dominant-box" style="background-color: #2b5681;" data-color="#2b5681"></div>
+            <div class="dominant-box" style="background-color: #c89058;" data-color="#c89058"></div>
+            <div class="dominant-box" style="background-color: #c38649;" data-color="#c38649"></div>
+            <div class="dominant-box" style="background-color: #376ea5;" data-color="#376ea5"></div>
+            <div class="dominant-box" style="background-color: #285078;" data-color="#285078"></div>
+            <div class="dominant-box" style="background-color: #be7c3a;" data-color="#be7c3a"></div>
+            <div class="dominant-box" style="background-color: #316293;" data-color="#316293"></div>
+            <div class="dominant-box" style="background-color: #f5eadf;" data-color="#f5eadf"></div>
+            <div class="dominant-box" style="background-color: #264c72;" data-color="#264c72"></div>
+            <div class="dominant-box" style="background-color: #2d5a87;" data-color="#2d5a87"></div>
+            <div class="dominant-box" style="background-color: #d2a476;" data-color="#d2a476"></div>
+            <div class="dominant-box" style="background-color: #dcb894;" data-color="#dcb894"></div>
+            <div class="dominant-box" style="background-color: #d7ae85;" data-color="#d7ae85"></div>
+            <div class="dominant-box" style="background-color: #b9722b;" data-color="#b9722b"></div>
+            <div class="dominant-box" style="background-color: #d1a273;" data-color="#d1a273"></div>
+            <div class="dominant-box" style="background-color: #3b76b1;" data-color="#3b76b1"></div>
+            <div class="dominant-box" style="background-color: #3c78b4;" data-color="#3c78b4"></div>
+            <div class="dominant-box" style="background-color: #b36619;" data-color="#b36619"></div>
+            <div class="dominant-box" style="background-color: #000000;" data-color="#000000"></div>
+        </div>
+        <div class="color-picker">
+            <div class="dominant-box" style="background-color: #63c629;" data-color="#63c629"></div>
+            <div class="dominant-box" style="background-color: #4488cc;" data-color="#4488cc"></div>
+            <div class="dominant-box" style="background-color: #468cd2;" data-color="#468cd2"></div>
+            <div class="dominant-box" style="background-color: #4e9cea;" data-color="#4e9cea"></div>
+            <div class="dominant-box" style="background-color: #50a0f0;" data-color="#50a0f0"></div>
+            <div class="dominant-box" style="background-color: #4080c0;" data-color="#4080c0"></div>
+            <div class="dominant-box" style="background-color: #1c3854;" data-color="#1c3854"></div>
+            <div class="dominant-box" style="background-color: #122436;" data-color="#122436"></div>
+            <div class="dominant-box" style="background-color: #14283c;" data-color="#14283c"></div>
+            <div class="dominant-box" style="background-color: #306090;" data-color="#306090"></div>
+            <div class="dominant-box" style="background-color: #09121b;" data-color="#09121b"></div>
+            <div class="dominant-box" style="background-color: #af5e0d;" data-color="#af5e0d"></div>
+            <div class="dominant-box" style="background-color: #2c5884;" data-color="#2c5884"></div>
+            <div class="dominant-box" style="background-color: #0f1e2d;" data-color="#0f1e2d"></div>
+            <div class="dominant-box" style="background-color: #274e75;" data-color="#274e75"></div>
+            <div class="dominant-box" style="background-color: #ebd6c1;" data-color="#ebd6c1"></div>
+            <div class="dominant-box" style="background-color: #f4e8dc;" data-color="#f4e8dc"></div>
+            <div class="dominant-box" style="background-color: #ead4be;" data-color="#ead4be"></div>
+            <div class="dominant-box" style="background-color: #e6ccb2;" data-color="#e6ccb2"></div>
+            <div class="dominant-box" style="background-color: #e1c2a3;" data-color="#e1c2a3"></div>
+            <div class="dominant-box" style="background-color: #e0c0a0;" data-color="#e0c0a0"></div>
+            <div class="dominant-box" style="background-color: #c78e55;" data-color="#c78e55"></div>
+            <div class="dominant-box" style="background-color: #c28446;" data-color="#c28446"></div>
+            <div class="dominant-box" style="background-color: #dbb691;" data-color="#dbb691"></div>
+        </div>
+
+        <h3>Histogram</h3>
+        <div class="color-picker">
+            <div class="color-box" style="background-color: #CD090C;" data-color="red"></div>
+            <div class="color-box" style="background-color: #FC940F;" data-color="orange"></div>
+            <div class="color-box" style="background-color: #FFFF06;" data-color="yellow"></div>
+            <div class="color-box" style="background-color: #2FCC15;" data-color="green"></div>
+            <div class="color-box" style="background-color: #2CC1C6;" data-color="Blue-green"></div>
+            <div class="color-box" style="background-color: #0315FF;" data-color="blue"></div>
+            <div class="color-box" style="background-color: #762CA8;" data-color="purple"></div>
+            <div class="color-box" style="background-color: #FC98BF;" data-color="pink"></div>
+            <div class="color-box" style="background-color: #FFFFFF;" data-color="white"></div>
+            <div class="color-box" style="background-color: #999999;" data-color="grey"></div>
+            <div class="color-box" style="background-color: #000000;" data-color="black"></div>
+            <div class="color-box" style="background-color: #88541D;" data-color="brown"></div>
+        </div>
+
+        <h3>Results</h3>
+        <section id="visualization">
+            <canvas id="canvas" width="1280" height="800">
+                Your browser doesn't recognize the canvas element
+            </canvas>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        ISEL 2024-2025
+    </footer>
+
+</body>
+
+</html>
